@@ -44,3 +44,84 @@ a {
   justify-content: center;
   padding: 24px;
 }
+
+/* ===== Card NFT ===== */
+.card {
+  width: 100%;
+  max-width: 350px;
+  padding: 24px;
+  background-color: var(--bg-card);
+  border-radius: 15px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+.card__image {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card__picture {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.card__title {
+  margin: 24px 0 12px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.card__description {
+  font-weight: 300;
+  line-height: 1.45;
+  color: var(--soft-blue);
+}
+
+/* Linha com o preço e o tempo restante */
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 0 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.card__price,
+.card__time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card__price {
+  font-weight: 600;
+  color: var(--cyan);
+}
+
+.card__time {
+  font-weight: 300;
+  color: var(--soft-blue);
+}
+
+/* Criador: avatar e nome */
+.card__creator {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 300;
+  color: var(--soft-blue);
+}
+
+.card__avatar {
+  width: 33px;
+  height: 33px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.card__creator a {
+  color: var(--white);
+}

@@ -166,3 +166,27 @@ a {
 .card__creator a:hover {
   color: var(--cyan);
 }
+
+/* ===== Crédito do desafio ===== */
+.attribution {
+  margin-top: 32px;
+  font-size: 13px;
+  font-weight: 300;
+  text-align: center;
+  color: var(--soft-blue);
+}
+
+.attribution a {
+  color: var(--cyan);
+}
+
+/* ===== Responsivo: celulares (até 480px) ===== */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .card {
+    max-width: 327px;
+  }
+}

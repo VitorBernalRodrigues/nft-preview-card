@@ -167,6 +167,37 @@ a {
   color: var(--cyan);
 }
 
+/* ===== Título da seção ===== */
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.section-subtitle {
+  margin: 8px 0 48px;
+  font-weight: 300;
+  text-align: center;
+  color: var(--soft-blue);
+}
+
+/* ===== Lista de cards ===== */
+.cards {
+  width: 100%;
+}
+
+.card-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.card-list__item {
+  width: 350px;
+}
+
 /* ===== Crédito do desafio ===== */
 .attribution {
   margin-top: 32px;

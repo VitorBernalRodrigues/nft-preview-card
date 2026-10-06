@@ -12,31 +12,17 @@
 </head>
 <body>
   <main class="page">
-    <!-- Card NFT do desafio -->
-    <article class="card">
-      <a href="#" class="card__image" aria-label="View Equilibrium #3429">
-        <img src="images/image-equilibrium.svg" alt="Equilibrium NFT artwork" class="card__picture">
-        <span class="card__overlay"><img src="images/icon-view.svg" alt=""></span>
-      </a>
-
-      <h1 class="card__title"><a href="#">Equilibrium #3429</a></h1>
-      <p class="card__description">Our Equilibrium collection promotes balance and calm.</p>
-
-      <div class="card__info">
-        <span class="card__price"><img src="images/icon-ethereum.svg" alt="">0.041 ETH</span>
-        <span class="card__time"><img src="images/icon-clock.svg" alt="">3 days left</span>
-      </div>
-
-      <div class="card__creator">
-        <img src="images/image-avatar.svg" alt="" class="card__avatar">
-        <p>Creation of <a href="#">Jules Wyvern</a></p>
-      </div>
-    </article>
+    <!-- O JavaScript coloca os cards aqui dentro -->
+    <section id="cards" class="cards"></section>
 
     <footer class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>.
       Coded by Vitor, Mateus and Gustavo.
     </footer>
   </main>
+
+  <!-- Componentes (a ordem importa: o main.js vem por último) -->
+  <script src="js/components/card.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

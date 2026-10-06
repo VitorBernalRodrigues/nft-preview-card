@@ -35,6 +35,77 @@ a {
   text-decoration: none;
 }
 
+/* ===== Header ===== */
+
+/* Fica preso no topo, com fundo translúcido */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: hsla(217, 54%, 11%, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.header__container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.header__highlight {
+  color: var(--cyan);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.header__links a {
+  font-weight: 300;
+  color: var(--soft-blue);
+  transition: color 0.2s ease;
+}
+
+.header__links a:hover {
+  color: var(--cyan);
+}
+
+.header__button {
+  padding: 10px 20px;
+  border: 1px solid var(--cyan);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cyan);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.header__button:hover {
+  background-color: var(--cyan);
+  color: var(--bg-main);
+}
+
 /* ===== Página: conteúdo centralizado na horizontal ===== */
 .page {
   min-height: 100vh;

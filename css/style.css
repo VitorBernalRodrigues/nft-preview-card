@@ -56,6 +56,7 @@ a {
 }
 
 .card__image {
+  position: relative;
   display: block;
   border-radius: 8px;
   overflow: hidden;
@@ -124,4 +125,44 @@ a {
 
 .card__creator a {
   color: var(--white);
+}
+
+/* ===== Efeitos de hover ===== */
+
+/* O card sobe um pouco e ganha uma borda ciano */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), 0 0 0 1px hsla(178, 100%, 50%, 0.4);
+}
+
+/* Camada ciano com o ícone de olho que aparece sobre a imagem */
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card__image:hover .card__overlay,
+.card__image:focus-visible .card__overlay {
+  opacity: 1;
+}
+
+/* Título e nome do criador ficam ciano */
+.card__title a,
+.card__creator a {
+  transition: color 0.2s ease;
+}
+
+.card__title a:hover,
+.card__creator a:hover {
+  color: var(--cyan);
 }

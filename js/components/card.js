@@ -9,7 +9,10 @@ function createCard(nft) {
   card.innerHTML = `
     <a href="#" class="card__image" aria-label="View ${nft.title} #${nft.number}">
       <img src="${nft.image}" alt="${nft.title} NFT artwork" class="card__picture">
-      <span class="card__overlay"><img src="images/icon-view.svg" alt=""></span>
+      <span class="card__overlay">
+        <!-- O ícone de olho fica pulsando enquanto o mouse está sobre a imagem -->
+        <img src="images/icon-view.svg" alt="" class="animate__animated animate__pulse animate__infinite">
+      </span>
     </a>
 
     <h2 class="card__title"><a href="#">${nft.title} #${nft.number}</a></h2>

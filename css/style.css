@@ -35,6 +35,108 @@ a {
   text-decoration: none;
 }
 
+/* ===== Header ===== */
+
+/* Fica preso no topo, com fundo translúcido */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: hsla(217, 54%, 11%, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.header__container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.header__highlight {
+  color: var(--cyan);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.header__links a {
+  font-weight: 300;
+  color: var(--soft-blue);
+  transition: color 0.2s ease;
+}
+
+.header__links a:hover {
+  color: var(--cyan);
+}
+
+.header__button {
+  padding: 10px 20px;
+  border: 1px solid var(--cyan);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cyan);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.header__button:hover {
+  background-color: var(--cyan);
+  color: var(--bg-main);
+}
+
+/* Botão do menu do celular (escondido no desktop) */
+.header__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header__toggle span {
+  width: 24px;
+  height: 2px;
+  background-color: var(--white);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Quando o menu abre, as três linhas viram um "X" */
+.header__toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.header__toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ===== Página: conteúdo centralizado na horizontal ===== */
 .page {
   min-height: 100vh;
@@ -216,6 +318,41 @@ a {
 @media (max-width: 1180px) {
   .card-list {
     grid-template-columns: repeat(2, minmax(0, 350px));
+  }
+}
+
+/* ===== Responsivo: header com menu "hambúrguer" ===== */
+@media (max-width: 860px) {
+  .header__toggle {
+    display: flex;
+  }
+
+  /* A navegação vira uma caixa que abre abaixo do header */
+  .header__nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 24px;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .header__nav.is-open {
+    display: flex;
+  }
+
+  .header__links {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .header__button {
+    text-align: center;
   }
 }
 

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+<defs>
+<radialGradient id="bg" cx="50%" cy="50%" r="70%"><stop offset="0" stop-color="#22223b"/><stop offset="1" stop-color="#0b0b16"/></radialGradient>
+<radialGradient id="sol" cx="40%" cy="40%"><stop offset="0" stop-color="#fff3b0"/><stop offset=".6" stop-color="#f4c95d"/><stop offset="1" stop-color="#e09f3e"/></radialGradient>
+<filter id="g" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="20"/></filter>
+</defs>
+<rect width="600" height="600" fill="url(#bg)"/>
+<g transform="rotate(-18 300 300)">
+<g fill="none" stroke="#f4c95d" stroke-opacity=".4" stroke-width="1.5"><ellipse cx="300" cy="300" rx="110" ry="46.2"/><ellipse cx="300" cy="300" rx="165" ry="69.3"/><ellipse cx="300" cy="300" rx="220" ry="92.4"/><ellipse cx="300" cy="300" rx="275" ry="115.5"/></g>
+<circle cx="300" cy="300" r="70" fill="#f4c95d" opacity=".5" filter="url(#g)"/>
+<circle cx="300" cy="300" r="52" fill="url(#sol)"/>
+<circle cx="395.3" cy="323.1" r="9" fill="#e07a5f"/><circle cx="145.0" cy="276.3" r="13" fill="#81b29a"/><circle cx="224.8" cy="386.8" r="11" fill="#f2cc8f"/><circle cx="437.5" cy="200.0" r="16" fill="#9b8cff"/>
+</g>
+</svg>

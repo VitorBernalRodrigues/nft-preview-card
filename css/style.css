@@ -35,14 +35,13 @@ a {
   text-decoration: none;
 }
 
-/* ===== Página: centraliza o conteúdo na tela ===== */
+/* ===== Página: conteúdo centralizado na horizontal ===== */
 .page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 24px;
+  padding: 64px 24px 32px;
 }
 
 /* ===== Card NFT ===== */
@@ -186,16 +185,18 @@ a {
   width: 100%;
 }
 
+/* Grid de 3 colunas no desktop */
 .card-list {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 350px));
   justify-content: center;
-  gap: 32px;
+  gap: 40px 32px;
 }
 
 .card-list__item {
-  width: 350px;
+  display: flex;
+  justify-content: center;
 }
 
 /* ===== Crédito do desafio ===== */
@@ -211,10 +212,36 @@ a {
   color: var(--cyan);
 }
 
+/* ===== Responsivo: tablets (2 colunas) ===== */
+@media (max-width: 1180px) {
+  .card-list {
+    grid-template-columns: repeat(2, minmax(0, 350px));
+  }
+}
+
+/* ===== Responsivo: celulares grandes (1 coluna) ===== */
+@media (max-width: 780px) {
+  .card-list {
+    grid-template-columns: minmax(0, 350px);
+  }
+}
+
 /* ===== Responsivo: celulares (até 480px) ===== */
 @media (max-width: 480px) {
   body {
     font-size: 15px;
+  }
+
+  .page {
+    padding: 40px 24px 24px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 32px;
   }
 
   .card {

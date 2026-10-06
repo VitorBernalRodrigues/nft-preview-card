@@ -10,6 +10,13 @@ function createHeader() {
         <span>Equili<span class="header__highlight">bria</span></span>
       </a>
 
+      <!-- Botão "hambúrguer": só aparece no celular -->
+      <button class="header__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <nav class="header__nav" id="menu">
         <ul class="header__links">
           <li><a href="#">Explore</a></li>
@@ -21,6 +28,16 @@ function createHeader() {
       </nav>
     </div>
   `;
+
+  // Menu do celular: o botão abre e fecha a navegação
+  const toggle = header.querySelector('.header__toggle');
+  const nav = header.querySelector('.header__nav');
+
+  toggle.addEventListener('click', function () {
+    const isOpen = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', isOpen);
+    toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
 
   return header;
 }
